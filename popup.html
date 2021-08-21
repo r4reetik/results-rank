@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="styles/popup.css" />
+        <title>Results Rank</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark mb-2">
+            <a class="navbar-brand mx-auto" href="#">
+                <img
+                    src="/assets/icon/icon_64.png"
+                    width="30"
+                    height="30"
+                    class="d-inline-block align-top"
+                    alt="Logo"
+                />
+                Results Rank
+            </a>
+        </nav>
+        <div class="contaianer p-1 px-2">
+            <form>
+                <div class="row">
+                    <div class="col">
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="First Roll Number"
+                            id="fRoll"
+                        />
+                    </div>
+                    <div class="col">
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Last Roll Number"
+                            id="lRoll"
+                        />
+                    </div>
+                </div>
+            </form>
+
+            <div class="pt-2">
+                <button type="button" class="btn btn-success container" id="btnFetch">
+                    Fetch - Top 5
+                </button>
+            </div>
+
+            <hr class="display-4" />
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Rank</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">CGPA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td id="name1"></td>
+                        <td id="cgpa1"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td id="name2"></td>
+                        <td id="cgpa2"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td id="name3"></td>
+                        <td id="cgpa3"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td id="name4"></td>
+                        <td id="cgpa4"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td id="name5"></td>
+                        <td id="cgpa5"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="scripts/popup.js"></script>
+    </body>
+</html>

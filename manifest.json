@@ -1,0 +1,49 @@
+{
+    "manifest_version": 3,
+    "name": "Results Rank",
+    "description": "This chrome extension will generate a ranking list of JC Bose University Result.",
+    "version": "21.8.20.1",
+    "icons": {
+        "8": "/assets/icon/icon_8.png",
+        "16": "/assets/icon/icon_16.png",
+        "32": "/assets/icon/icon_32.png",
+        "48": "/assets/icon/icon_48.png",
+        "64": "/assets/icon/icon_64.png",
+        "96": "/assets/icon/icon_96.png",
+        "128": "/assets/icon/icon_128.png",
+        "256": "/assets/icon/icon_256.png",
+        "512": "/assets/icon/icon_512.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "8": "/assets/icon/icon_8.png",
+            "16": "/assets/icon/icon_16.png",
+            "32": "/assets/icon/icon_32.png",
+            "48": "/assets/icon/icon_48.png",
+            "64": "/assets/icon/icon_64.png",
+            "96": "/assets/icon/icon_96.png",
+            "128": "/assets/icon/icon_128.png",
+            "256": "/assets/icon/icon_256.png",
+            "512": "/assets/icon/icon_512.png"
+        }
+    },
+    "permissions": ["activeTab", "tabs", "storage", "scripting"],
+    "optional_permissions": [],
+    "host_permissions": ["*://*.jcboseustymca.co.in/Forms/Student/*"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.jcboseustymca.co.in/Forms/Student/ResultStudents.aspx"],
+            "js": ["/scripts/open.js"],
+            "run_at": "document_end"
+        },
+        {
+            "matches": ["*://*.jcboseustymca.co.in/Forms/Student/PrintReportCardNew.aspx"],
+            "js": ["/scripts/extract.js"],
+            "run_at": "document_end"
+        }
+    ]
+}
